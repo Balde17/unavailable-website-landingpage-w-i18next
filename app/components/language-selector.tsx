@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import { useLanguage } from "../contexts/language-context"
-import { cn } from "@/app/lib/utils"
 import { ChevronDown, ChevronUp } from "lucide-react"
 
 type LanguageOption = {
@@ -42,12 +41,8 @@ export default function LanguageSelector() {
             {languages.map((lang) => (
               <button
                 key={lang.code}
-                className={cn(
-                  "flex items-center w-full px-3 py-1 text-left text-xs hover:bg-green-500/10 transition-colors",
-                  {
-                    "bg-green-500/20": lang.code === language,
-                  },
-                )}
+                className={
+                  `flex items-center w-full px-3 py-1 text-left text-xs hover:bg-green-500/10 transition-colors bg-green-500/20` }
                 onClick={() => {
                   setLanguage(lang.code)
                   setIsOpen(false)

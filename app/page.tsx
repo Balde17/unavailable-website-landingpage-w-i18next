@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react"
 import { Mail, Phone, RefreshCw } from "lucide-react"
-import { cn } from "./lib/utils"
 import { LanguageProvider, useLanguage } from "./contexts/language-context"
 import LanguageSelector from "./components/language-selector"
 
@@ -83,9 +82,7 @@ function MaintenanceContent() {
             <span className="mr-2">&gt;</span>
             <span>{loadingText}</span>
             <span
-              className={cn("ml-1 inline-block w-3 h-5 bg-green-500", {
-                "opacity-0": !blinkCursor,
-              })}
+              className={`ml-1 inline-block w-3 h-5 bg-green-500 opacity-0: ${!blinkCursor}` }
             />
           </div>
 
