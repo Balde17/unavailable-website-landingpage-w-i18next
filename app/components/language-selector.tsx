@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { useLanguage } from "../app/contexts/language-context"
-import { cn } from "@/lib/utils"
+import { useLanguage } from "../contexts/language-context"
+import { cn } from "@/app/lib/utils"
 import { ChevronDown, ChevronUp } from "lucide-react"
 
 type LanguageOption = {
